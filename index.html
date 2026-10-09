@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Galeria pública de imagens organizadas por ano e semestre, com downloads individuais.">
+  <title>Galeria de imagens</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Página inicial">
+      <span class="brand-mark" aria-hidden="true">↓</span>
+      <span>Galeria de imagens</span>
+    </a>
+    <span class="header-note">Arquivos para download</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">ACERVO PÚBLICO</p>
+      <h1>Encontre e baixe suas imagens</h1>
+      <p class="hero-copy">Explore os arquivos organizados por ano e semestre. Escolha uma imagem para visualizar ou baixar.</p>
+    </section>
+
+    <nav id="semester-nav" class="semester-nav" aria-label="Semestres"></nav>
+
+    <section class="gallery-section" aria-labelledby="gallery-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow" id="semester-kicker">ACERVO</p>
+          <h2 id="gallery-title">Imagens</h2>
+        </div>
+        <span id="image-count" class="count-pill">0 imagens</span>
+      </div>
+      <div id="gallery" class="gallery" aria-live="polite">
+        <p class="state-message">Carregando imagens…</p>
+      </div>
+    </section>
+
+    <p class="privacy-note">Este site é público. Qualquer pessoa com o link poderá visualizar e baixar os arquivos.</p>
+  </main>
+
+  <footer class="site-footer">
+    <span>Galeria de imagens</span>
+    <span>Hospedado no GitHub Pages</span>
+  </footer>
+
+  <dialog id="image-dialog" class="image-dialog">
+    <form method="dialog">
+      <button class="dialog-close" aria-label="Fechar visualização">×</button>
+    </form>
+    <img id="dialog-image" src="" alt="">
+    <div class="dialog-info">
+      <div>
+        <h2 id="dialog-title"></h2>
+        <p id="dialog-description"></p>
+      </div>
+      <a id="dialog-download" class="button button-primary" href="#" download>Baixar imagem</a>
+    </div>
+  </dialog>
+</body>
+</html>
